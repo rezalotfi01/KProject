@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainSwipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.people.PeopleFragment">
+
+    <io.rmiri.skeleton.SkeletonViewGroup
+        android:id="@+id/skeletonGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:SK_BackgroundViewsColor="#EEEEEE"
+        app:SK_animationAutoStart="true"
+        app:SK_animationDirection="LTR"
+        app:SK_animationDuration="1000"
+        app:SK_animationFinishType="gradient"
+        app:SK_animationNormalType="gradient"
+        app:SK_backgroundMainColor="@android:color/transparent"
+        app:SK_highLightColor="#DEDEDE">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineInputTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <io.rmiri.skeleton.SkeletonView
+                android:id="@+id/skPeopleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:SK_cornerRadius="6dp"
+                app:SK_padding="0dp"
+                app:SK_shapeType="rect"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guidelineInputTop">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPeopleLabel"
+                    android:text="@string/people_list"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </io.rmiri.skeleton.SkeletonView>
+
+
+            <io.rmiri.skeleton.SkeletonView
+                android:id="@+id/skeletonPeopleList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:minHeight="160dp"
+                app:SK_cornerRadius="6dp"
+                app:SK_padding="0dp"
+                app:SK_shapeType="rect"
+                app:layout_constraintStart_toEndOf="@id/skPeopleLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guidelineInputTop">
+
+                <TextView
+                    android:id="@+id/txtPeopleList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </io.rmiri.skeleton.SkeletonView>
+
+
+            <io.rmiri.skeleton.SkeletonView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/skRelationsLabel"
+                app:SK_cornerRadius="6dp"
+                app:SK_padding="0dp"
+                app:SK_shapeType="rect"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="72dp"
+                app:layout_constraintTop_toBottomOf="@+id/skeletonPeopleList">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/relations"
+                    android:id="@+id/txtRelationsLabel"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </io.rmiri.skeleton.SkeletonView>
+
+
+            <io.rmiri.skeleton.SkeletonView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:SK_cornerRadius="6dp"
+                app:SK_padding="0dp"
+                android:minHeight="240dp"
+                app:SK_shapeType="rect"
+                app:layout_constraintStart_toStartOf="@id/skeletonPeopleList"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/skRelationsLabel">
+
+                <TextView
+                    android:id="@+id/txtRelations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </io.rmiri.skeleton.SkeletonView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </io.rmiri.skeleton.SkeletonViewGroup>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

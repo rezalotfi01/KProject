@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/colorPrimary"
+        android:width="2000dp"
+        android:height="2000dp"
+        tools:targetApi="m" />
+    <item
+        android:width="200dp"
+        android:height="200dp"
+        android:gravity="center"
+        android:drawable="@drawable/ic_splash"
+        tools:targetApi="m"
+        tools:ignore="UnusedAttribute">
+    </item>
+
+</layer-list>

@@ -1,0 +1,2 @@
+rootProject.name='KTest'
+include ':app'

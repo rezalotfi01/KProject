@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ruler.RulerFragment">
+
+    <com.github.rongi.rotate_layout.layout.RotateLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rotateLayout">
+        <com.example.ktest.custom.views.CustomRuler
+            android:id="@+id/ruler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.github.rongi.rotate_layout.layout.RotateLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.675" />
+
+
+    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+        android:id="@+id/segGroupUnit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:elevation="2dp"
+        app:borderColor="@color/colorPrimary"
+        app:borderWidth="1dp"
+        app:divider="@color/colorPrimaryDark"
+        app:dividerPadding="10dp"
+        app:dividerWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineUnit"
+        app:position="0"
+        app:radius="30dp"
+        app:ripple="true"
+        app:selectedBackground="@color/colorPrimary">
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:padding="10dp"
+            app:drawableGravity="top"
+            app:selectedTextColor="@color/white"
+            app:text="@string/centimeter"
+            app:textColor="@color/colorPrimary" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:padding="10dp"
+            app:drawableGravity="top"
+            app:selectedTextColor="@color/white"
+            app:text="@string/inch"
+            app:textColor="@color/colorPrimary" />
+    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+
+    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+        android:id="@+id/segGroupOrientation"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:elevation="2dp"
+        app:borderColor="@color/colorPrimary"
+        app:borderWidth="1dp"
+        app:divider="@color/colorPrimaryDark"
+        app:dividerPadding="10dp"
+        app:dividerWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/segGroupUnit"
+        android:layout_marginTop="28dp"
+        app:position="0"
+        app:radius="30dp"
+        app:ripple="true"
+        app:selectedBackground="@color/colorPrimary">
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:padding="10dp"
+            app:drawableGravity="top"
+            app:selectedTextColor="@color/white"
+            app:text="@string/horizontal"
+            app:textColor="@color/colorPrimary" />
+
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:padding="10dp"
+            app:drawableGravity="top"
+            app:selectedTextColor="@color/white"
+            app:text="@string/vertical"
+            app:textColor="@color/colorPrimary" />
+    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

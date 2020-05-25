@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "969394161841",
+    "firebase_url": "https://ktest-android.firebaseio.com",
+    "project_id": "ktest-android",
+    "storage_bucket": "ktest-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969394161841:android:eceacbc6323ca05b92ba90",
+        "android_client_info": {
+          "package_name": "com.example.ktest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969394161841-rqvpvfqv24u7ie96oqm0japlkl9ts1s6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6shrDVCnf9vmcafq-U4g2nDXdgSXb1VQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969394161841-rqvpvfqv24u7ie96oqm0japlkl9ts1s6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

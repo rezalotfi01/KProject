@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unexpected_error_occurred">متاسفانه درخواست با خطا مواجه شد</string>
+    <string name="network_error_unauthorized">خطا در شناسایی سرور</string>
+    <string name="network_error_too_many_request">درخواست بیش از حد مجاز</string>
+    <string name="network_error_not_found">آیتم مورد نظر یافت نشد</string>
+    <string name="network_error_no_internet">عدم دسترسی به اینترنت</string>
+
+    <string name="input">ورودی: </string>
+    <string name="output">خروجی: </string>
+
+    <string name="matrix">ماتریس</string>
+    <string name="people">افراد</string>
+    <string name="ruler">خط‌کش</string>
+    <string name="setting">تنظیمات</string>
+
+    <string name="centimeter">سانتی‌متر</string>
+    <string name="inch">اینچ</string>
+
+    <string name="select_language">لطفا زبان را انتخاب کنید</string>
+    <string name="language">زبان برنامه</string>
+    <string name="horizontal">افقی</string>
+    <string name="vertical">عمودی</string>
+    <string name="relations">ارتباط‌ها</string>
+    <string name="related_to">مرتبط است با</string>
+    <string name="people_list">لیست افراد</string>
+    <string name="user">کاربر</string>
+    <string name="error_in_loading_data">خطا در دریافت اطلاعات</string>
+    <string name="no_one">هیچکس</string>
+</resources>

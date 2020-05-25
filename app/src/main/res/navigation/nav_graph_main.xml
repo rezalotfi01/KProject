@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/matrixFragment">
+
+    <fragment
+        android:id="@+id/matrixFragment"
+        android:name="com.example.ktest.ui.fragments.matrix.MatrixFragment"
+        android:label="fragment_matrix"
+        tools:layout="@layout/fragment_matrix" />
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.example.ktest.ui.fragments.people.PeopleFragment"
+        android:label="fragment_people"
+        tools:layout="@layout/fragment_people" />
+    <fragment
+        android:id="@+id/rulerFragment"
+        android:name="com.example.ktest.ui.fragments.ruler.RulerFragment"
+        android:label="fragment_ruler"
+        tools:layout="@layout/fragment_ruler" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.ktest.ui.fragments.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+
+
+</navigation>

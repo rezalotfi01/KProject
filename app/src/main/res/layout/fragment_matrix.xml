@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refreshLayout"
+    tools:context=".ui.fragments.matrix.MatrixFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineInputTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <TextView
+            android:id="@+id/txtInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineInputTop" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableInputMatrix"
+            android:layout_marginStart="28dp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@id/txtInput"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineInputTop" />
+
+
+        <TextView
+            android:id="@+id/txtOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="@string/output"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableInputMatrix" />
+
+        <TextView
+            android:id="@+id/txtOutputMatrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:lineSpacingExtra="4dp"
+            app:layout_constraintStart_toEndOf="@id/txtOutput"
+            app:layout_constraintTop_toTopOf="@id/txtOutput" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
