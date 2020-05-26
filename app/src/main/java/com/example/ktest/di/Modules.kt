@@ -9,8 +9,11 @@ import com.example.ktest.App
 import com.example.ktest.data.db.DatabaseManager
 import com.example.ktest.data.models.MyObjectBox
 import com.example.ktest.data.net.ApiClient
-import com.example.ktest.data.net.NetManager
 import com.example.ktest.data.sharedpref.SharedPreferencesManager
+import com.example.ktest.ui.activities.language.LanguageRepository
+import com.example.ktest.ui.activities.splash.SplashRepository
+import com.example.ktest.ui.fragments.matrix.MatrixRepository
+import com.example.ktest.ui.fragments.people.PeopleRepository
 import io.reactivex.disposables.CompositeDisposable
 import okhttp3.Cache
 import okhttp3.Interceptor
@@ -126,10 +129,6 @@ val networkModule = module {
             .build()
             .create(ApiClient::class.java)
     }
-
-    single {
-        NetManager(get(),get())
-    }
 }
 
 
@@ -158,5 +157,23 @@ val sharedPreferencesModule = module {
     //Provide SharedPreferencesManager
     single {
         SharedPreferencesManager(get(),get())
+    }
+}
+
+val repositoryModule = module {
+    single {
+        MatrixRepository()
+    }
+
+    single {
+        PeopleRepository()
+    }
+
+    single {
+        LanguageRepository()
+    }
+
+    single {
+        SplashRepository()
     }
 }

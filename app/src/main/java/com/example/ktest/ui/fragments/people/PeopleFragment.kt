@@ -16,19 +16,18 @@ class PeopleFragment : BaseFragment<PeopleViewModel>() {
     override fun getLayoutRes(): Int = R.layout.fragment_people
 
     override fun initViewsAndCallbacks() {
-        setupSkeleton()
+        skeletonGroup.post {
+            skeletonGroup.startAnimation()
+        }
+
         mainSwipeLayout.setOnRefreshListener {
             viewModel.loadPeopleData()
         }
     }
 
-    private fun setupSkeleton() {
-        skeletonGroup.startAnimation()
-    }
-
     override fun onResume() {
         super.onResume()
-        viewModel.loadPeopleData()
+//        viewModel.loadPeopleData()
     }
 
 

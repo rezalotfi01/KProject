@@ -2,32 +2,13 @@ package com.example.ktest.ui.fragments.matrix
 
 import androidx.lifecycle.MutableLiveData
 import com.example.ktest.base.BaseViewModel
+import org.koin.core.inject
 
 class MatrixViewModel : BaseViewModel() {
-
+    val repository: MatrixRepository by inject()
     var matrixVal = MutableLiveData<MutableList<MutableList<Int>>>()
 
     fun loadMatrixVal(){
-        matrixVal.value = getMatrixFromFakeSource()
+        matrixVal.value = repository.getMatrixFromFakeSource()
     }
-
-    private fun getMatrixFromFakeSource() : MutableList<MutableList<Int>>{
-        val dim = 5
-        var num = 0
-        val numsList: MutableList<MutableList<Int>> =
-            mutableListOf()
-        for (i in 0 until dim) {
-            numsList.add(arrayListOf())
-            var j = 0
-            while (j < dim) {
-                numsList[i].add(num)
-                j++
-                num++
-                //if you want test Method with other numbers comment above line and uncomment below line
-//                num = (0..99).random()
-            }
-        }
-        return numsList
-    }
-
 }
